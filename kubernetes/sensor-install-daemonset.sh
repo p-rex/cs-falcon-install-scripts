@@ -65,9 +65,7 @@ export FALCON_IAR_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-imageanalyzer/$
 # Set image tag
 export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-imageanalyzer --list-tags | jq -r '.tags[-1]')
 
-### IMCL Watcher/socket mode. Cluster name is required or not
-### IMCL why falcon-imageanalyzer not falcon-image-analyzer
-# https://falcon.crowdstrike.com/documentation/page/a0cf9976/deploy-image-assessment-at-runtime-with-a-helm-chart#x22b3ae7
+# Install as Watcher mode
 helm upgrade --install falcon-imageanalyzer crowdstrike/falcon-image-analyzer \
   -n falcon-image-analyzer --create-namespace \
   --set crowdstrikeConfig.cid=$FALCON_CID \
