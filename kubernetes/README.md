@@ -18,7 +18,7 @@ Please install these commands before run the script.
 
 # Usage
 
-Create API key with the following scope.
+1. Create API key with the following scope.
 ```
 Falcon Container Image : Read, Write
 Falcon Images Download : Read
@@ -29,20 +29,20 @@ Falcon Container CLI  : Write
 
 
 
-Download **config.sh**.
+2. Download **config.sh**.
 ```
 curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes/config.sh
 ```
 
-Edit **config.sh**.
+3. Edit **config.sh**.
 
-Set environmental variables.
+4. Set environmental variables.
 ```
 source config.sh
 ```
 
 
-Install sensors.
+5. Install sensors.
 ```
 curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes/sensor-install-daemonset.sh | bash
 ```
