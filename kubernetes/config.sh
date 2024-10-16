@@ -40,4 +40,4 @@ export FALCON_GKE_AUTOPILOT=false
 ## IAR configuration
 ##------------------------------------------##
 # set cluster name
-export K8S_CLUSTER_NAME=kubernetes-cluster
+export FALCON_K8S_CLUSTER_NAME=kubernetes-cluster
