@@ -76,4 +76,5 @@ helm upgrade --install falcon-imageanalyzer crowdstrike/falcon-image-analyzer \
   --set image.registryConfigJSON=$FALCON_IMAGE_PULL_TOKEN \
   --set deployment.enabled=true \
   --set daemonset.enabled=false \
-  --set crowdstrikeConfig.clusterName=$K8S_CLUSTER_NAME
+  --set crowdstrikeConfig.clusterName=$FALCON_K8S_CLUSTER_NAME
+  
