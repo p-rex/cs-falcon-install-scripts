@@ -1,22 +1,19 @@
 #!/bin/bash -x
 
-#######################################################
-# Load functions
-source <(curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes/functions.sh)
+# To check helm release, run "helm list -n NAMESPACE"
 
-
-#######################################################
-# Check prerequisite
-check_command "curl"
-check_command "jq"
-check_command "helm"
-check_command "kubectl"
-
-
-#######################################################
-# Uninstall sensor
-
-# Sensor
-helm uninstall falcon-helm -n $FALCON_NAMESPACE
-# Naamesapace
+# Falcon ensor
+helm uninstall falcon-helm -n falcon-system
 kubectl delete ns falcon-system
+
+# KAC
+helm uninstall falcon-kac -n falcon-kac
+kubectl delete ns falcon-kac
+
+# IAR
+helm uninstall falcon-imageanalyzer -n falcon-image-analyzer
+kubectl delete ns falcon-image-analyzer
+
+# Remove helm repogitory
+helm repo remove crowdstrike
+
