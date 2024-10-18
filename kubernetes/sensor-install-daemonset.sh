@@ -32,6 +32,7 @@ kubectl label ns --overwrite falcon-system pod-security.kubernetes.io/enforce=pr
 # Install sensor
 helm install falcon-helm crowdstrike/falcon-sensor \
   --set falcon.cid="$FALCON_CID" \
+  --set node.backend=$FALCON_SENSOR_NODE_BACKEND \
   --set falcon.tags=$FALCON_SENSOR_GROUPING_TAGS \
   --set node.image.repository="$FALCON_IMAGE_REPO" \
   --set node.image.tag="$FALCON_IMAGE_TAG" \
