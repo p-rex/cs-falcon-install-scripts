@@ -26,7 +26,7 @@ export FALCON_CONTAINER_REGISTRY=registry.crowdstrike.com
 
 
 ##------------------------------------------##
-## Kubernetes configuration
+## Falcon sensor configuration
 ##------------------------------------------##
 
 # set sensor mode. "bpf" or "kernel"
