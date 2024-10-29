@@ -2,7 +2,7 @@
 
 # To check helm release, run "helm list -n NAMESPACE"
 
-# Falcon ensor
+# Falcon sensor
 helm uninstall falcon-helm -n falcon-system
 kubectl delete ns falcon-system
 
