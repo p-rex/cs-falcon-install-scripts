@@ -24,8 +24,11 @@ export FALCON_CONTAINER_REGISTRY=registry.crowdstrike.com
 
 
 ##------------------------------------------##
-## Kubernetes configuration
+## Falcon sensor configuration
 ##------------------------------------------##
+
+# set sensor mode. "bpf" or "kernel"
+export FALCON_SENSOR_NODE_BACKEND=bpf
 
 # Set sensor grouping tags. For multiple tags, use "\,". e.g., "tag1\,tag2\,tag3"
 export FALCON_SENSOR_GROUPING_TAGS=""
