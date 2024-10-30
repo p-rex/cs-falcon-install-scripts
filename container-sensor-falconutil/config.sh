@@ -1,19 +1,16 @@
 ##------------------------------------------##
-## CID
+## General configuration
 ##------------------------------------------##
+
+# CID
 export FALCON_CID=<CID_WITH_CHECKSUM>
 
-##------------------------------------------##
-## API Key
-##------------------------------------------##
+# API Credential
 export FALCON_CLIENT_ID=<CLIENT ID>
 export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 
 
-##------------------------------------------##
-## Region
-##------------------------------------------##
-
+# Region
 # US-1
 # export FALCON_CLOUD_API=api.crowdstrike.com
 # export FALCON_REGION=us-1
@@ -23,6 +20,7 @@ export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 export FALCON_REGION=us-2
 export FALCON_CLOUD_API=api.us-2.crowdstrike.com
 export FALCON_CONTAINER_REGISTRY=registry.crowdstrike.com
+
 
 
 ##------------------------------------------##
