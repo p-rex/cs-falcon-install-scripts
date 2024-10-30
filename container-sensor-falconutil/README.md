@@ -20,28 +20,25 @@ Falcon Images Download : Read
 ```
 
 
-
-
-
-1. Download **config.sh**.
+2. Download **config.sh**.
 ```
 curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/container-sensor-falconutil/config.sh
 ```
 
-2. Edit **config.sh**.
+3. Edit **config.sh**.
 
-3. Set environmental variables.
+4. Set environmental variables.
 ```
 source config.sh
 ```
 
 
-4. Install sensor.
+5. Install sensor.
 ```
 curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/container-sensor-falconutil/install_container_sensor_falconutil.sh \
 | bash
 ```
 
-5. Put image  
+6. Put image  
 Put created image to your container registry.
 
