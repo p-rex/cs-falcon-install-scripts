@@ -44,7 +44,7 @@ source config.sh
 
 5. Install sensors.
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes/sensor-install-daemonset.sh | bash
+curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes/install_daemonset.sh | bash
 ```
 
 
