@@ -38,7 +38,7 @@ source config.sh
 
 4. Install sensor.
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/container-sensor-falconutil/falconuti_install.sh \
+curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/container-sensor-falconutil/install_container_sensor_falconutil.sh \
 | bash
 ```
 
