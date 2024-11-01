@@ -12,7 +12,6 @@ Please install these commands before run the script.
 - jq
 - helm
 - kubectl
-- docker
 - eksctl
 
 
@@ -49,7 +48,7 @@ curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/h
 ```
 
 
-# Uninstall
+## Uninstall
 Uninstall injector, KAC, IAR, and falcon-helm.
 ```
 curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/eks-fargate/uninstall_all.sh | bash
