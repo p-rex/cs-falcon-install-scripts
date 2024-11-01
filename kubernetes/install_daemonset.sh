@@ -10,8 +10,10 @@ helm repo update
 
 
 # Get image pull token
-# The script may display a Warning, and to avoid the warning line being set to an environment variable, the "tail" command is used to retrieve the last line.
-export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- --get-pull-token | tail -n 1)
+# This script may display a Warning. "tail" command is used to avoid the warning line.
+export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
+ | bash -s -- --get-pull-token \
+ | tail -n 1)
 
 
 #######################################################
@@ -21,7 +23,9 @@ export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStr
 export FALCON_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-sensor/${FALCON_REGION}/release/falcon-sensor
 
 #Set image tag
-export FALCON_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-sensor --list-tags | jq -r '.tags[-1]')
+export FALCON_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
+ | bash -s -- -t falcon-sensor --list-tags \
+ | jq -r '.tags[-1]')
 
 # Create Namespace for sensor
 kubectl create namespace falcon-system
@@ -47,7 +51,9 @@ helm install falcon-helm crowdstrike/falcon-sensor \
 export FALCON_KAC_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-kac/${FALCON_REGION}/release/falcon-kac
 
 # Set image tag
-export FALCON_KAC_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-kac --list-tags | jq -r '.tags[-1]')
+export FALCON_KAC_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
+ | bash -s -- -t falcon-kac --list-tags \
+ | jq -r '.tags[-1]')
 
 helm install falcon-kac crowdstrike/falcon-kac \
   -n falcon-kac --create-namespace \
@@ -65,7 +71,9 @@ helm install falcon-kac crowdstrike/falcon-kac \
 export FALCON_IAR_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-imageanalyzer/${FALCON_REGION}/release/falcon-imageanalyzer
 
 # Set image tag
-export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-imageanalyzer --list-tags | jq -r '.tags[-1]')
+export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
+ | bash -s -- -t falcon-imageanalyzer --list-tags \
+ | jq -r '.tags[-1]')
 
 # Install as Watcher mode
 helm upgrade --install falcon-imageanalyzer crowdstrike/falcon-image-analyzer \
