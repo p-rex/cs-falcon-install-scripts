@@ -11,10 +11,7 @@ Please install these commands before run the script.
 - jq
 - helm
 - kubectl
-- docker
 
-> If these commands are set as aliases (e.g., "alias kubectl='microk8s kubectl'"), the script will not work. In that case, paste the script into the terminal and run it.
-  
 
 # Usage
 
