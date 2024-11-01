@@ -62,7 +62,8 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
     - TBD
 
 ## Azure
-TBD
+- AKS
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
 
 ## On-premise k8s
 - Microk8s
