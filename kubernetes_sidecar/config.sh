@@ -26,9 +26,6 @@ export FALCON_CONTAINER_REGISTRY=registry.crowdstrike.com
 ## falcon container sensor configuration
 ##------------------------------------------##
 
-# Set AWS_REGION
-export FALCON_AWS_REGION=ap-northeast-1
-
 # Set sensor grouping tags. For multiple tags, use "\,". e.g., "tag1\,tag2\,tag3"
 export FALCON_SENSOR_GROUPING_TAGS="tag1"
 

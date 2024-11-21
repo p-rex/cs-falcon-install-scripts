@@ -11,7 +11,9 @@ helm repo update
 
 # Get image pull token
 # The script may display a Warning, and to avoid the warning line being set to an environment variable, the "tail" command is used to retrieve the last line.
-export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- --get-pull-token | tail -n 1)
+export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
+ | bash -s -- --get-pull-token \
+ | tail -n 1)
 
 
 #######################################################
