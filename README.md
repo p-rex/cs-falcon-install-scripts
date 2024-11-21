@@ -43,7 +43,7 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 
 ## AWS
 - EKS EC2
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 - EKS Fargate
     - [Sidecar](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/eks-fargate)
 - ECS Fargate
@@ -55,16 +55,16 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 
 ## Google Cloud
 - GKE Standard
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 - GKE Autopilot
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 - Cloud Run
     - TBD
 
 ## Azure
 - AKS
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 
 ## On-premise k8s
 - Microk8s
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
