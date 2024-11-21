@@ -66,6 +66,7 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 
 ## On-premise k8s
-- Microk8s
+- MicroK8s
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
     - [Sidecar](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_sidecar)
+> MicroK8sでは **microk8s kubectl**, **microk8s helm** コマンドですので、スクリプトを書き換えるか、aliasを作成してスクリプトをc&pしてください。
