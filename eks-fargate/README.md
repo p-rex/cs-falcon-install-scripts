@@ -1,6 +1,6 @@
 # About this script
 - This script is for EKS Fargate.
-- This script installs Falcon sensor, KAC, IAR.
+- This script installs Falcon sensor, KAC and IAR.
 - Falcon sensor is installed as sidecar.
 - IAC is installed as Watcher mode.
 - Container images are pulled from CrowdStrike repository.

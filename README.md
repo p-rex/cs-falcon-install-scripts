@@ -68,3 +68,4 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 ## On-premise k8s
 - Microk8s
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
+    - [Sidecar](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_sidecar)
