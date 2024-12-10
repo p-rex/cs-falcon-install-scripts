@@ -15,7 +15,7 @@ Please install these commands before run the script.
 
 1. Create API credential with the following scope.
 ```
-Falcon Container Image : Read, Write
+Falcon Container Image : Read
 Falcon Images Download : Read
 ```
 
@@ -32,13 +32,16 @@ curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/
 source config.sh
 ```
 
+5. docker login.  
+Please login to your container registry so that you can run `docker pull` command in the next step.
 
-5. Install sensor.
+
+6. Install sensor.
 ```
 curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/container-sensor-falconutil/install_container_sensor_falconutil.sh \
 | bash
 ```
 
-6. Put image  
-Put created image to your container registry.
+7. Put image.  
+Push created image to your container registry.
 

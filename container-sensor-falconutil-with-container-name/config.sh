@@ -39,7 +39,10 @@ export FALCON_TARGET_IMAGE=<REPOSITORY>:<TAG>
 ##------------------------------------------##
 
 # Set serverless type. "ecsfargate" or "cloudrun"
-export FALCON_PATCH_TYPE=ecsfargate
+export FALCON_PATCH_TYPE=cloudrun
 
 # Set falcon sensor tags. For multiple tags, use "\,". e.g., "tag1\,tag2\,tag3"
 export FALCON_SENSOR_GROUPING_TAGS=""
+
+# Set container name . This is not supported for ECS Fargate.
+export FALCON_CONTAINER_NAME=container
