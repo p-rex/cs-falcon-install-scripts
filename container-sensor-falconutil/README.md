@@ -42,6 +42,6 @@ curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/h
 | bash
 ```
 
-7. Put image.  
+7. Push image.  
 Push created image to your container registry.
 
