@@ -32,6 +32,7 @@ export FALCON_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/fal
 kubectl create namespace falcon-system
 
 # Set label
+# If you use k8s v1.22 or later, you can skip this line. For more details, search "NamespaceDefaultLabelName".
 kubectl label namespace falcon-system kubernetes.io/metadata.name=falcon-system
 
 # Install container sensor

@@ -13,6 +13,7 @@ containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
 
 
 # Create targate image
+# There is no "--container" option in ECS Fargate.
 docker run --user 0:0 \
 -v /var/run/docker.sock:/var/run/docker.sock \
 --rm $FALCON_CONTAINER_IMAGE \
