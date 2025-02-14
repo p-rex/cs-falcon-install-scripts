@@ -48,7 +48,7 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
     - [Sidecar](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/eks-fargate)
 - ECS Fargate
     - [falconutil](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/container-sensor-falconutil)
-    - Patching Utility - TBD
+    - [Patching Utility](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/ecs-fargate-patching-utility)
 - ECS EC2
     - TBD
 
