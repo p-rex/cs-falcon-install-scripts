@@ -15,8 +15,8 @@ export FALCON_CONTAINER_IMAGE=$(curl \
 docker tag $FALCON_CONTAINER_IMAGE $FALCON_CONTAINER_IMAGE_ECR
 
 # login to ECR
-aws ecr get-login-password --region $FALCON_AWS_REGION \
- | docker login --username AWS --password-stdin ${FALCON_AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-1.amazonaws.com
+aws ecr get-login-password --region $FALCON_ECR_REGION \
+ | docker login --username AWS --password-stdin ${FALCON_AWS_ACCOUNT_ID}.dkr.ecr.${FALCON_ECR_REGION}.amazonaws.com
 
 # Push the sensor image to ECR.
 docker push $FALCON_CONTAINER_IMAGE_ECR
@@ -32,7 +32,7 @@ export FALCON_TASK_DEF_JSON_STRING=$(cat $FALCON_TASK_DEF_PATH \
 
 
 # Set image pull token for ECR
-export FALCON_IMAGE_PULL_TOKEN=$(echo "{\"auths\":{\"${FALCON_AWS_ACCOUNT_ID}.dkr.ecr.${FALCON_AWS_REGION}.amazonaws.com\":{\"auth\": \"$(echo AWS:$(aws ecr get-login-password)|base64 -w 0)\"}}}" | base64 -w 0) 
+export FALCON_IMAGE_PULL_TOKEN=$(echo "{\"auths\":{\"${FALCON_AWS_ACCOUNT_ID}.dkr.ecr.${FALCON_ECR_REGION}.amazonaws.com\":{\"auth\": \"$(echo AWS:$(aws ecr get-login-password)|base64 -w 0)\"}}}" | base64 -w 0) 
 
 
 # Create task definition

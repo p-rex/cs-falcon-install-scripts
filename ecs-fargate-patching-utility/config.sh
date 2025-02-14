@@ -32,8 +32,8 @@ export FALCON_CONTAINER_REGISTRY=registry.crowdstrike.com
 # AWS Account ID
 export FALCON_AWS_ACCOUNT_ID=111111111111
 
-# AWS Region
-export FALCON_AWS_REGION=ap-northeast-1
+# ECR Region
+export FALCON_ECR_REGION=ap-northeast-1
 
 
 ##------------------------------------------##
