@@ -6,6 +6,7 @@ Please install these commands before run the script.
 - curl
 - jq
 - docker
+- aws cli
 
   
 
