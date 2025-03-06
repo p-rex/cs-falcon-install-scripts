@@ -41,7 +41,7 @@ export FALCON_ECR_REGION=ap-northeast-1
 ##------------------------------------------##
 
 # Set task definition file path
-export FALCON_TASK_DEF_PATH=./taskdifinition.json
+export FALCON_TASK_DEF_PATH=./taskdefinition.json
 
 # Set the repo and tag for the falcon container sensor image as it will be pushed to the ECR.
 export FALCON_CONTAINER_IMAGE_ECR=<REPOSITORY>:<TAG>
