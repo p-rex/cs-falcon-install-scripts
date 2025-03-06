@@ -2,7 +2,7 @@
 
 #### Step 1 #########################
 ## Get falcon container sensor image. 
-## If you have already pushed falcon container image to your ECR, skip this step and go to step 2.
+## If you have already pushed falcon container image to your ECR, just login to ECR and and go to step 2.
 
 
 # Pull the latest falcon container image and set the image name to environmental variable.
