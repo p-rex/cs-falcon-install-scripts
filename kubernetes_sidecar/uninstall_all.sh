@@ -13,7 +13,7 @@ kubectl delete ns falcon-kac
 
 
 # IAR
-helm uninstall falcon-imageanalyzer -n falcon-image-analyzer
+helm uninstall falcon-image-analyzer -n falcon-image-analyzer
 kubectl delete ns falcon-image-analyzer
 
 

@@ -13,7 +13,7 @@ kubectl delete ns falcon-kac
 eksctl delete fargateprofile fp-falcon-kac --cluster $FALCON_K8S_CLUSTER_NAME
 
 # IAR
-helm uninstall falcon-imageanalyzer -n falcon-image-analyzer
+helm uninstall falcon-image-analyzer -n falcon-image-analyzer
 kubectl delete ns falcon-image-analyzer
 eksctl delete fargateprofile fp-falcon-image-analyzer --cluster $FALCON_K8S_CLUSTER_NAME
 

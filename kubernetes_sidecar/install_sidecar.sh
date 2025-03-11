@@ -78,7 +78,7 @@ export FALCON_IAR_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-imageanalyzer/$
 export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-imageanalyzer --list-tags | jq -r '.tags[-1]')
 
 # Install as Watcher mode
-helm upgrade --install falcon-imageanalyzer crowdstrike/falcon-image-analyzer \
+helm upgrade --install falcon-image-analyzer crowdstrike/falcon-image-analyzer \
   -n falcon-image-analyzer --create-namespace \
   --set crowdstrikeConfig.cid=$FALCON_CID \
   --set crowdstrikeConfig.clientID=$FALCON_CLIENT_ID \
