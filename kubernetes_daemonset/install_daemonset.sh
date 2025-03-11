@@ -34,7 +34,7 @@ kubectl create namespace falcon-system
 kubectl label ns --overwrite falcon-system pod-security.kubernetes.io/enforce=privileged
 
 # Install sensor
-helm install falcon-helm crowdstrike/falcon-sensor \
+helm install falcon-sensor crowdstrike/falcon-sensor \
   --set falcon.cid="$FALCON_CID" \
   --set node.backend=$FALCON_SENSOR_NODE_BACKEND \
   --set falcon.tags=$FALCON_SENSOR_GROUPING_TAGS \
@@ -76,7 +76,7 @@ export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike
  | jq -r '.tags[-1]')
 
 # Install as Watcher mode
-helm upgrade --install falcon-imageanalyzer crowdstrike/falcon-image-analyzer \
+helm upgrade --install falcon-image-analyzer crowdstrike/falcon-image-analyzer \
   -n falcon-image-analyzer --create-namespace \
   --set crowdstrikeConfig.cid=$FALCON_CID \
   --set crowdstrikeConfig.clientID=$FALCON_CLIENT_ID \
