@@ -70,3 +70,62 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
     - [Sidecar](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_sidecar)
 > MicroK8sでは **microk8s kubectl**, **microk8s helm** コマンドを使用しますので、スクリプトを書き換えるか、aliasを作成してスクリプトをc&pしてください。
+
+
+# 参考情報
+## falcon-container-sensor-pull コマンド説明
+
+### 事前準備
+以下のScopeのAPIキーを作成します。
+```
+Falcon Container Image : Read
+Falcon Images Download : Read
+```
+
+作成したAPIキーを元に環境変数を設定しておきます。
+```
+export FALCON_CLIENT_ID=<CLIENT ID>
+export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
+```
+
+### 重要なオプション
+#### -t
+イメージの種類を指定します。
+
+| 種類 | オプション |  
+| ---- | ---- |
+| ノードセンサー | falcon-sensor |
+| コンテナセンサー　| falcon-container |
+| Kubernetes Admission Controller(KAC) | falcon-kac |
+| イメージアナライザー | falcon-imageanalyzer |
+
+これ以降は全て **falcon-sensor** のコマンド例のみ記載しますので、書き換えてご利用ください。
+
+#### -p
+マルチアーキテクチャ対応のイメージをする場合は、 **x86_64、aarch64** の指定が必要です。  
+マルチアークテクチャではない場合、このオプションは不要です。
+
+#### -t
+バージョン指定する場合、-tオプションでタグを指定します。
+
+
+### コマンド例
+#### イメージタグ一覧の取得
+```
+curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
+ | bash -s -- --list-tags -t falcon-sensor
+```
+
+
+#### イメージをpull - 最新バージョン
+```
+curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
+ | bash -s -- -t falcon-sensor --platform x86_64
+```
+
+
+#### イメージをpull - バージョン指定 (タグを指定してください)
+```
+curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
+ | bash -s -- -t falcon-sensor -p x86_64 -v 7.24.0-17706-1.falcon-linux.Release.US-1
+```
