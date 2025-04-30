@@ -74,9 +74,9 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 
 
 # 参考情報
-## falcon-container-sensor-pull コマンド説明
+## falcon-container-sensor-pull 利用方法
 
-### 事前準備
+### <ins>事前準備</ins>
 以下のScopeのAPIキーを作成します。
 ```
 Falcon Container Image : Read
@@ -89,7 +89,7 @@ export FALCON_CLIENT_ID=<CLIENT ID>
 export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 ```
 
-### 重要なオプション
+### <ins>重要なオプション</ins>
 #### -t
 イメージの種類を指定します。
 
@@ -110,7 +110,7 @@ export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 バージョン指定する場合、-tオプションでタグを指定します。
 
 
-### コマンド例
+### <ins>コマンド例</ins>
 #### イメージタグ一覧の取得
 ```
 curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
@@ -118,14 +118,14 @@ curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/c
 ```
 
 
-#### イメージをpull - 最新バージョン
+#### 最新イメージをpull
 ```
 curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
  | bash -s -- -t falcon-sensor --platform x86_64
 ```
 
 
-#### イメージをpull - バージョン指定 (タグを指定してください)
+#### 指定バージョンのイメージをpull ( -vでイメージタグを指定してください)
 ```
 curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
  | bash -s -- -t falcon-sensor -p x86_64 -v 7.24.0-17706-1.falcon-linux.Release.US-1
