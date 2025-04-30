@@ -103,6 +103,9 @@ export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 
 後述のコマンド例では `falcon-sensor` の例のみ記載しております。
 
+#### --list-tags
+イメージタグ一覧（全バージョンのタグ）を取得します。
+
 #### -p
 platformの指定です。
 マルチアーキテクチャ対応のイメージをpullする場合は、 `x86_64` または `aarch64` を指定します。  
@@ -123,7 +126,7 @@ curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/c
 #### 最新イメージをpull
 ```
 curl -s https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh \
- | bash -s -- -t falcon-sensor --platform x86_64
+ | bash -s -- -t falcon-sensor -p x86_64
 ```
 
 
