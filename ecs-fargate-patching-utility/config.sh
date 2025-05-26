@@ -53,4 +53,4 @@ export FALCON_CONTAINER_IMAGE_ECR=<REPOSITORY>:<TAG>
 ##------------------------------------------##
 
 # Set falcon sensor tags. For multiple tags, use "\,". e.g., "tag1\,tag2\,tag3"
-export FALCON_SENSOR_GROUPING_TAGS="ecsfargate-patchingu-utility"
+export FALCON_SENSOR_GROUPING_TAGS="ecsfargate-patching-utility"
