@@ -40,6 +40,9 @@ export FALCON_ECR_REGION=ap-northeast-1
 ## patching utility configuration
 ##------------------------------------------##
 
+# Platform type. x86_64 or aarch64
+export FALCON_PLATFORM_TYPE=x86_64
+
 # Set task definition file path
 export FALCON_TASK_DEF_PATH=./taskdefinition.json
 

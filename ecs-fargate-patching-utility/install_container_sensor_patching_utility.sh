@@ -8,7 +8,7 @@
 # Pull the latest falcon container image and set the image name to environmental variable.
 export FALCON_CONTAINER_IMAGE=$(curl \
  https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
- | bash -s -- -t falcon-container \
+ | bash -s -- -t falcon-container -p $FALCON_PLATFORM_TYPE\
  | tail -n 1)
 
 # Tag the sensor image.
