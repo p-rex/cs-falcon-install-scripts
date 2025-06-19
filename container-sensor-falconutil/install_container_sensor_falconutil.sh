@@ -8,7 +8,7 @@ docker pull $FALCON_SOURCE_IMAGE
 # Pull the latest falcon container image and set the image name to environmental variable.
 export FALCON_CONTAINER_IMAGE=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/\
 containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
-| bash -s -- -t falcon-container | tail -n 1)
+| bash -s -- -t falcon-container -p $FALCON_PLATFORM_TYPE | tail -n 1)
 
 
 

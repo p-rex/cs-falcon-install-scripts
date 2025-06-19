@@ -38,6 +38,9 @@ export FALCON_TARGET_IMAGE=<REPOSITORY>:<TAG>
 ## falcon container sensor configuration
 ##------------------------------------------##
 
+# Platform type. x86_64 or aarch64
+export FALCON_PLATFORM_TYPE=x86_64
+
 # Set serverless type. "ecsfargate" or "cloudrun"
 export FALCON_PATCH_TYPE=ecsfargate
 
