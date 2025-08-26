@@ -15,7 +15,7 @@ Please install these commands before run the script.
 
 2. Download **task definition json** from ECS task.
 
-3. Create API credential with the following scope in the Falcon console.
+3. Create API credential with the following scope in the Falcon console. (Support and resources > API clients and keys)
 ```
 Falcon Container Image : Read
 Falcon Images Download : Read

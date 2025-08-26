@@ -2,10 +2,10 @@
 ## General configuration
 ##------------------------------------------##
 
-# CID
+# CID  (Host setup and management > Sensor downloads)
 export FALCON_CID=<CID_WITH_CHECKSUM>
 
-# API Credential
+# API Credential (Support and resources > API clients and keys)
 export FALCON_CLIENT_ID=<CLIENT ID>
 export FALCON_CLIENT_SECRET=<CLIENT_SECRET>
 

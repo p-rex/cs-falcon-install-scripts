@@ -1,6 +1,8 @@
 # cs-falcon-install-scripts
 
-CrowdStrike Falcon Sensorをコンテナ環境にインストールするためのスクリプト集です。
+CrowdStrike Falcon Sensorをコンテナ環境にインストールするためのスクリプト集です。  
+本資料は参考資料です。正式なインストール手順については、管理コンソールのマニュアルをご確認ください。
+
 
 # コンセプト
 ### 1. 関連ツールは全てインストール
