@@ -72,6 +72,8 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 ## Azure
 - AKS
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
+- Azure Container Instances
+    - [falconutil](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/azure-container-instances)
 
 ## On-premise k8s
 - MicroK8s
