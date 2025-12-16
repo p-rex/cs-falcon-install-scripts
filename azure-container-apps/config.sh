@@ -38,10 +38,6 @@ export FALCON_AZR_RESOURCE_GRP_NAME=
 # ACR Login server name
 export FALCON_ACR_NAME=<registry-name>.azurecr.io
 
-# ACI Container group name
-export FALCON_AZR_CONTAINER_GRP_NAME=
-
-
 
 ##------------------------------------------##
 ## container image configuration
