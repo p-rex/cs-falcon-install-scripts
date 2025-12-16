@@ -24,7 +24,7 @@ Falcon Images Download : Read
 
 2.  **config.sh** をダウンロードします。
 ```
-curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/azure-container-instances/config.sh
+curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/azure-container-apps/config.sh
 ```
 
 3. **config.sh** を編集します。
@@ -36,7 +36,7 @@ source config.sh
 
 5. センサーインストール。
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/azure-container-instances/install_aci.sh \
+curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/azure-container-apps/install_aca.sh \
 | bash
 ```
 
