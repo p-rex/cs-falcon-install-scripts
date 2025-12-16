@@ -1,6 +1,7 @@
 # 概要
-- このスクリプトは、falconutilを用いて、falcon container sensorをコンテナイメージに組み込みます。
-- Azure container instances用です。
+- このスクリプトは**Azure container instances**用です。
+- falconutilを用いて、falcon container sensorをコンテナイメージに組み込みます。
+
   
 
 
