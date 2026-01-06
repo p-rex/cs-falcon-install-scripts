@@ -6,7 +6,8 @@
 - Container images are pulled from CrowdStrike repository.
 
 > [!Important]
-> If the container images you want to protect are in ECR, install OIDC Controller and assign IAM role to the Service Account for Falcon Injector.
+> If your container images are in ECR, install OIDC Controller and assign IAM role to the Service Account for Falcon Injector.
+> Look at Step 3 and 6 on this page.
 > https://github.com/CrowdStrike/Container-Security/blob/main/aws-eks/eks-implementation-guide.md
 
 # Prerequisites
