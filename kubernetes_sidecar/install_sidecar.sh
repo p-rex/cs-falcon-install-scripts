@@ -17,7 +17,7 @@ export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStr
 
 
 #######################################################
-# Install falcon container sensor
+# Install falcon container injector
 
 #Set Falcon repository
 export FALCON_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-container/${FALCON_REGION}/release/falcon-sensor

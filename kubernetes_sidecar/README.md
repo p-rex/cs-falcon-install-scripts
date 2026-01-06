@@ -1,5 +1,5 @@
 # About this script
-- This script installs Falcon sensor, KAC and IAR.
+- This script installs Falcon sensor injector, KAC and IAR.
 - Falcon sensor is installed as sidecar.
 - IAC is installed as Watcher mode.
 - Container images are pulled from CrowdStrike repository.
@@ -44,6 +44,13 @@ source config.sh
 ```
 curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes_sidecar/install_sidecar.sh | bash
 ```
+
+> [!Important]
+> At this point, **Falcon container injector** starts up, and the **Falcon container sensor** is not running. When a new POD is created, the Falcon sensor will be injected into the pod as a sidecar.
+
+
+6. Deploy new pod  
+Falcon container sensor is injected into the pod as a sidecar.
 
 
 ## Uninstall
