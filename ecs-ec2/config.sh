@@ -34,8 +34,6 @@ export FALCON_AWS_ACCOUNT_ID=111111111111
 # ECR Region
 export FALCON_ECR_REGION=ap-northeast-1
 
-
-
 # ECS Cluster name
 export FALCON_ECS_EC2_CLUSTER_NAME=ecs_cluster
 
