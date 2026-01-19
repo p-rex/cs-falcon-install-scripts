@@ -5,10 +5,6 @@
 - IAC is installed as Watcher mode.
 - Container images are pulled from CrowdStrike repository.
 
-> [!Important]
-> If your container images are in ECR, install OIDC Controller and assign IAM role to the Service Account for Falcon Injector.
-> Look at Step 3 and 6 on this page.
-> https://github.com/CrowdStrike/Container-Security/blob/main/aws-eks/eks-implementation-guide.md
 
 # Prerequisites
 Please install these commands before run the script.
@@ -18,6 +14,10 @@ Please install these commands before run the script.
 - kubectl
 - eksctl
 
+> [!Important]
+> If your container images are in ECR, install OIDC Controller and assign IAM role to the Service Account for Falcon Injector.
+> Look at Step 3 and 6 on this page.
+> https://github.com/CrowdStrike/Container-Security/blob/main/aws-eks/eks-implementation-guide.md
 
 
 # Usage
