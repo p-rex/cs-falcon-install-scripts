@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
 #### Step 1 #########################
-## Get falcon container sensor image. 
-## If you have already pushed falcon container image to your ECR, just login to ECR and and go to step 2.
+## Get falcon sensor image. 
+## If you have already pushed falcon sensor image to your ECR, just login to ECR and and go to step 2.
 
 
 # Pull the latest falcon container image and set the image name to environmental variable.
@@ -28,15 +28,19 @@ docker push $FALCON_SENSOR_IMAGE_ECR
 
 
 # Get cloudformation template
-cudl -LO \
+curl -LO \
 https://raw.githubusercontent.com/CrowdStrike/aws-cloudformation-falcon-sensor-ecs/refs/heads/main/falcon-sensor-ecs-ec2/falcon-ecs-ec2-daemon.yaml
 
 
 # Deploy sensor
   aws cloudformation deploy \
-    --stack-name falcon-ecs-ec2-daemon-$ECS_EC2_CLUSTER_NAME \
+    --stack-name falcon-ecs-ec2-daemon-$FALCON_ECS_EC2_CLUSTER_NAME \
     --template-file falcon-ecs-ec2-daemon.yaml \
     --parameter-overrides \
-      "ECSClusterName=$ECS_EC2_CLUSTER_NAME" \
+      "ECSClusterName=$FALCON_ECS_EC2_CLUSTER_NAME" \
       "FalconCID=$FALCON_CID" \
-      "FalconImagePath=$FALCON_SENSOR_IMAGE_ECR"
+      "FalconImagePath=$FALCON_SENSOR_IMAGE_ECR" \
+      "Tags=$FALCON_SENSOR_GROUPING_TAGS"
+
+# Delete CloudFormation template
+rm falcon-ecs-ec2-daemon.yaml
