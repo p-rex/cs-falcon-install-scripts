@@ -28,7 +28,7 @@ Falcon Images Download : Read
 
 4. Download **config.sh**.
 ```
-curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2/config.sh
+curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2-cloudformation/config.sh
 ```
 
 5. Edit **config.sh**.  
@@ -41,13 +41,13 @@ source config.sh
 
 7. Run script.
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2/install_ecs_ec2_cloudformation.sh \
+curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2-cloudformation/install_ecs_ec2_cloudformation.sh \
  | bash
 ```
 
 
 # Uninstall the sensor
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2/uninstall_all.sh \
+curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/ecs-ec2-cloudformation/uninstall_all.sh \
  | bash
 ```
