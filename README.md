@@ -58,7 +58,7 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
     - [falconutil](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/container-sensor-falconutil)
     - [Patching Utility](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/ecs-fargate-patching-utility)
 - ECS EC2
-    - TBD
+    - [CloudFormation](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/ecs-ec2-cloudformation)
 
 
 ## Google Cloud

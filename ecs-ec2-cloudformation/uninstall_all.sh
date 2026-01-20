@@ -5,6 +5,10 @@ aws cloudformation delete-stack \
     --stack-name falcon-ecs-ec2-daemon-$FALCON_ECS_EC2_CLUSTER_NAME
 
 
+# Download cleanup template
+curl -LO https://raw.githubusercontent.com/CrowdStrike/aws-cloudformation-falcon-sensor-ecs/refs/heads/main/falcon-sensor-ecs-ec2/falcon-ecs-ec2-daemon-cleanup.yaml
+
+
 # After the daemon stack is removed, clean up the artifacts.
 aws cloudformation deploy \
     --stack-name falcon-ecs-ec2-daemon-cleanup-$FALCON_ECS_EC2_CLUSTER_NAME \
@@ -17,3 +21,6 @@ aws cloudformation deploy \
 # Delete the cleanup stack from the cluster.
 aws cloudformation delete-stack \
     --stack-name falcon-ecs-ec2-daemon-cleanup-$FALCON_ECS_EC2_CLUSTER_NAME
+
+# Delete cleanup template
+rm falcon-ecs-ec2-daemon-cleanup.yaml
