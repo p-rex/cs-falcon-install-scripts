@@ -20,7 +20,7 @@ export FALCON_IMAGE_PULL_TOKEN=$(curl https://raw.githubusercontent.com/CrowdStr
 # Install falcon container injector
 
 #Set Falcon repository
-export FALCON_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-container/${FALCON_REGION}/release/falcon-sensor
+export FALCON_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-container/release/falcon-sensor
 
 #Set image tag
 export FALCON_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s \
@@ -54,7 +54,7 @@ helm upgrade --install falcon-helm crowdstrike/falcon-sensor \
 # Install KAC
 
 # Set Falcon repository
-export FALCON_KAC_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-kac/${FALCON_REGION}/release/falcon-kac
+export FALCON_KAC_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-kac/release/falcon-kac
 
 # Set image tag
 export FALCON_KAC_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-kac --list-tags | jq -r '.tags[-1]')
