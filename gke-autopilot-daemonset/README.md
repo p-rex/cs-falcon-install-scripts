@@ -29,7 +29,7 @@ Falcon Container CLI  : Write
 
 2. Download **config.sh**.
 ```
-curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes_daemonset/config.sh
+curl -LO https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/gke-autopilot-daemonset/config.sh
 ```
 
 3. Edit **config.sh**.
@@ -42,7 +42,9 @@ source config.sh
 
 5. Install sensors.
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes_daemonset/install_daemonset.sh | bash
+curl -s \
+https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/gke-autopilot-daemonset/install_daemonset.sh \
+| bash
 ```
 
 > [!IMPORTANT]
@@ -50,15 +52,17 @@ curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/h
 > (This script does not have a status check to keep the script simple.)  
 > If the sensor installation fails, please verify the **AllowlistSynchronizer** status with the following commands, and then run the `helm install falcon-sensor ~` command again (which is in the script).
 ```bash
-# Ensure the AllowlistSynchronizer is running:
+# Ensure the AllowlistSynchronizer is running
 kubectl get allowlistsynchronizers
 
-# Ensure the AllowlistSynchronizer has fetched the WorkloadAllowlist:
+# Ensure the AllowlistSynchronizer has fetched the WorkloadAllowlist
 kubectl get workloadallowlists
 ```
 
 # Uninstall
 Uninstall Sensor, KAC, IAR, and falcon-helm.
 ```
-curl -s https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/kubernetes_daemonset/uninstall_all.sh | bash
+curl -s \
+https://raw.githubusercontent.com/p-rex/cs-falcon-install-scripts/refs/heads/main/gke-autopilot-daemonset/uninstall_all.sh \
+| bash
 ```

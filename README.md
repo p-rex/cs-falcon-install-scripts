@@ -65,7 +65,7 @@ if、forなどの制御構文を使用しておらず、コマンドを並べた
 - GKE Standard
     - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
 - GKE Autopilot
-    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/kubernetes_daemonset)
+    - [Daemonset](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/gke-autopilot-daemonset)
 - Cloud Run
     - [falconutil](https://github.com/p-rex/cs-falcon-install-scripts/tree/main/container-sensor-falconutil-with-container-name)
 
