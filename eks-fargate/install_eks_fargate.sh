@@ -89,7 +89,7 @@ eksctl create fargateprofile \
   --namespace falcon-image-analyzer
 
 # Set Falcon repositor
-export FALCON_IAR_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-imageanalyzer/${FALCON_REGION}/release/falcon-imageanalyzer
+export FALCON_IAR_IMAGE_REPO=${FALCON_CONTAINER_REGISTRY}/falcon-imageanalyzer/release/falcon-imageanalyzer
 
 # Set image tag
 export FALCON_IAR_IMAGE_TAG=$(curl https://raw.githubusercontent.com/CrowdStrike/falcon-scripts/main/bash/containers/falcon-container-sensor-pull/falcon-container-sensor-pull.sh -s | bash -s -- -t falcon-imageanalyzer --list-tags | jq -r '.tags[-1]')
