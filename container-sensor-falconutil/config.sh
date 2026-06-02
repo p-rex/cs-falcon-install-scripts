@@ -41,8 +41,8 @@ export FALCON_TARGET_IMAGE=<REPOSITORY>:<TAG>
 # Platform type. x86_64 or aarch64
 export FALCON_PLATFORM_TYPE=x86_64
 
-# Set serverless type. "ecsfargate" or "cloudrun"
-export FALCON_PATCH_TYPE=ecsfargate
+# Set cloud service type. ACA, ACI, ECS_FARGATE, CLOUDRUN
+export FALCON_CLOUD_SERVICE=ECS_FARGATE
 
 # Set falcon sensor tags. For multiple tags, use "\,". e.g., "tag1\,tag2\,tag3"
 export FALCON_SENSOR_GROUPING_TAGS=""
